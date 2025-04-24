@@ -818,6 +818,15 @@ void FixRigidSmall::initial_integrate(int vflag)
 
 void FixRigidSmall::pre_neighbor()
 {
+  /*
+  printf("PRENEIGH step %ld xcm1 %g %g vcm1 %g %g xcm2 %g %g vcm2 %g %g\n",
+         update->ntimestep,
+         body[0].xcm[0],body[0].xcm[1],
+         body[0].vcm[0],body[0].vcm[1],
+         body[1].xcm[0],body[1].xcm[1],
+         body[1].vcm[0],body[1].vcm[1]);
+  */
+  
   for (int ibody = 0; ibody < nlocal_body; ibody++) {
     Body *b = &body[ibody];
     domain->remap(b->xcm,b->image,b->vcm);
