@@ -881,7 +881,7 @@ Note that numeric *lo* and *hi* values are specified either as
 absolute numbers or as fractions (0.0 to 1.0) of the range, depending
 on the "a" or "f" in the style setting for the color map.  The lo/hi
 values in each sub-range must satisfy lo < hi.
- 
+
 Here is how the *N* entries are used to determine the color of an
 individual atom, based on the value :math:`X` of its atom attribute.
 The entries are scanned from first to last.  The first time that *lo*

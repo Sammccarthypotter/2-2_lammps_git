@@ -158,13 +158,13 @@ void ComputeRigidAtom::compute_peratom()
       zero(i);
       continue;
     }
-    
+
     ibody = fixrigid->atom2body[i];
     if (ibody < 0) {
       zero(i);
       continue;
     }
-    
+
     body = &fixrigid->body[ibody];
 
     if (nvalues == 1) ptr = &vector_atom[i];

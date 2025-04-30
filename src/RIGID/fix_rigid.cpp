@@ -986,7 +986,7 @@ void FixRigid::pre_neighbor()
     //domain->remap(xcm[ibody],imagebody[ibody]);
     domain->remap(xcm[ibody],imagebody[ibody],vcm[ibody]);
   }
-  
+
   image_shift();
 }
 

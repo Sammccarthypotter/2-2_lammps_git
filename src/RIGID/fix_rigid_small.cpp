@@ -798,7 +798,7 @@ void FixRigidSmall::initial_integrate(int vflag)
    use domain->remap() in case xcm is far away from box
      due to first-time definition of rigid body in setup_bodies_static()
      or due to box flip
-   also adjust imagebody = rigid body image flags, due to xcm remap 
+   also adjust imagebody = rigid body image flags, due to xcm remap
    also remap vcm if xcm crosses periodic shearing boundary
    then communicate bodies so other procs will know of changes to body xcm/vcm
    then adjust xcmimage flags of all atoms in bodies via image_shift()
@@ -809,7 +809,7 @@ void FixRigidSmall::initial_integrate(int vflag)
      around in-box xcm and stay close to simulation box
    if just inferred unwrapped from atom image flags,
      then an unwrapped body could end up very far away from box
-   set_xv() would then compute huge displacements every step to 
+   set_xv() would then compute huge displacements every step to
      reset coords of all body atoms to be back inside the box,
      ditto for triclinic box flip which could cause numeric problems
 ------------------------------------------------------------------------- */

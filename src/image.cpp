@@ -1883,7 +1883,7 @@ int ColorMap::reset(int narg, char **arg)
     }
 
     // error return if color string was not recognized
-    
+
     if (mentry[i].color == nullptr) return 1;
   }
 
@@ -1962,19 +1962,19 @@ int ColorMap::minmax(double mindynamic, double maxdynamic)
   //   the color for a bin starting at highcurrent,
   //   more sensible to assign them color for bin ending at hicurrent
   // rounddown_flag is used in value2color()
-    
-  } else if (mstyle == SEQUENTIAL) { 
+
+  } else if (mstyle == SEQUENTIAL) {
     // NOTE: need to formalize and pre-set these 2 epsilon constants
     double epsbin;
     if (mrange == ABSOLUTE) epsbin = (hicurrent-locurrent) * 1.0e-12;
     else epsbin = 1.0e-9;
-    
+
     int ibin = static_cast<int> ((hicurrent-locurrent) * mbinsizeinv);
     int jbin = static_cast<int> ((hicurrent-locurrent-epsbin) * mbinsizeinv);
     if (jbin < ibin) rounddown_flag = 1;
     else rounddown_flag = 0;
   }
-  
+
   return 0;
 }
 

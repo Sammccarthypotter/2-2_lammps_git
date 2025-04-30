@@ -155,7 +155,7 @@ class FixRigidSmall : public Fix {
   int deform_vremap;                   // 1 if fix deform with V_REMAP exists
                                        //   if so, add/sub bias around Langevin
   double vbias[3];                     // store deformation bias for one body
-  
+
   int tstat_flag, pstat_flag;    // 0/1 = no/yes thermostat/barostat
 
   int t_chain, t_iter, t_order;
